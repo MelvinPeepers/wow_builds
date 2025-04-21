@@ -11,7 +11,7 @@ h1 {
     margin-bottom: 20px; /* Add spacing below the heading */
 }
 
-ul {
+nav, ul {
     list-style: none; /* Remove default list styling */
     padding: 0; /* Remove extra padding */
 }
