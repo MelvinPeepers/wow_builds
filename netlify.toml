@@ -1,6 +1,0 @@
-[[redirects]]
-  from = "/*"
-  to = "https://wowbuilds.nightsidecode.com/:splat"
-  status = 301
-  force = true
-  conditions = { Host = "wow.nightsidecode.com" }
