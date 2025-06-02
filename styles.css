@@ -47,7 +47,7 @@ a:hover {
 img {
   border: 5px solid #2E2E2E;
   border-radius: 4px;
-  width: 100%;       /* or any desired width */
+  max-width: 100%;      /* or any desired width */
   height: auto;      /* maintain consistent height */
   object-fit: cover;  /* crops image to fit box without distortion */   
   display: block;  
