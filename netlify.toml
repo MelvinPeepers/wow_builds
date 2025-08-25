@@ -1,3 +1,8 @@
+[[headers]]
+for = "/*"
+[headers.values]
+access-control-allow-origin = "https://wow.mel.quest"
+
 [[redirects]]
   from = "/*"
   to = "https://wowbuilds.nightsidecode.com/:splat"
