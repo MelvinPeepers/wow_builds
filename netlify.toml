@@ -8,4 +8,4 @@ access-control-allow-origin = "https://wow.mel.quest"
   to = "https://wowbuilds.nightsidecode.com/:splat"
   status = 301
   force = true
-  conditions = { Host = [wow.mel.quest"] }
+  conditions = { Host = ["wow.mel.quest"] }
