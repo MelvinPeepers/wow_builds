@@ -1,3 +1,10 @@
+/* Smooth scroll, but be kind to users with reduced motion */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+
 body {
     display: flex;
     flex-direction: column;
@@ -66,3 +73,87 @@ img {
     margin-bottom: 30px; /* more spacing on mobile if needed */
   }
 }
+
+
+
+/* Give anchor targets some top margin so they don't hide under the sticky nav */
+#hunter, #rogue, #shaman, #druid, #mage, #priest {
+  scroll-margin-top: 72px; /* matches nav height on most screens */
+}
+
+/* TOC (top sticky pill nav) */
+.toc {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(30, 30, 30, 0.9);
+  backdrop-filter: saturate(150%) blur(6px);
+  border-radius: 8px;
+  margin: 12px auto 24px;
+  padding: 10px 12px;
+  max-width: 900px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.35);
+}
+
+/* Horizontal scroll on small screens; wrap nicely on wide screens */
+.toc ul {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  scroll-snap-type: x proximity;
+}
+.toc li { scroll-snap-align: start; }
+
+/* Hide ugly scrollbar in WebKit while keeping it accessible */
+.toc ul::-webkit-scrollbar { height: 8px; }
+.toc ul::-webkit-scrollbar-thumb { background: #2E2E2E; border-radius: 8px; }
+.toc ul { scrollbar-width: thin; scrollbar-color: #2E2E2E transparent; }
+
+/* Pills */
+.toc a {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #1E1E1E;
+  color: #4DA6FF;
+  font-weight: 700;
+  white-space: nowrap;
+  text-decoration: none;
+  border: 1px solid #2E2E2E;
+  transition: background 120ms ease, color 120ms ease, border-color 120ms ease;
+}
+.toc a:hover,
+.toc a:focus-visible {
+  background: #232323;
+  color: #82CFFF;
+  outline: none;
+  border-color: #3a3a3a;
+}
+
+/* On wider screens, let pills wrap into multiple rows and center them */
+@media (min-width: 900px) {
+  .toc ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: visible;
+  }
+}
+
+/* Highlight the active section when reached (via :target) */
+:target > a,
+:target ~ img {
+  /* optional visual cue for the section content */
+}
+:target { /* Add a subtle section highlight */
+  outline: 2px solid #2E6FBF;
+  outline-offset: 6px;
+  border-radius: 6px;
+}
+
+/* Optional: tighten your existing nav styling so it doesn't conflict */
+nav { background: transparent; }
+nav, nav ul { list-style: none; padding: 0; }
