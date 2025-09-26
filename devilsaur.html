@@ -3,31 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>WoW Classic Devilsaur Routes</title>
+  <title>WoW Classic Devilsaur Farming Routes – 20th Anniversary</title>
+  <meta name="description" content="Devilsaur farming routes for WoW Classic’s 20th Anniversary. Un’Goro Crater paths with a clear, mobile-friendly map." />
   <link rel="stylesheet" href="styles.css"/>
   <link rel="icon" href="favicon.ico" type="image/x-icon"/>
 </head>
 <body>
   <h1>WoW Classic Devilsaur Routes</h1>
 
-  <!-- sticky pill nav (consistent with index) -->
+  <!-- sticky pill nav -->
   <nav class="toc" aria-label="Page navigation">
     <ul>
       <li><a href="index.html">Home</a></li>
     </ul>
   </nav>
 
-  <ul>
-    <li id="devilsaur-routes">
-      <img
-        src="/.netlify/images?url=/img/devilsaur_routes.webp&w=1400&q=80"
-        srcset="/.netlify/images?url=/img/devilsaur_routes.webp&w=700&q=80 700w,
-                /.netlify/images?url=/img/devilsaur_routes.webp&w=1400&q=80 1400w"
-        sizes="(max-width: 768px) 100vw, 1400px"
-        alt="Devilsaur routes in WoW Classic (Un'Goro tracking paths)"
-        width="1400" height="933"
-        loading="lazy" decoding="async">
-    </li>
-  </ul>
+  <p style="text-align:center; max-width:70ch; margin: 0 auto 20px;">
+    Looking for full talent builds? See our
+    <a href="index.html">WoW Classic 20th Anniversary Talent Builds</a>.
+  </p>
+
+  <section id="devilsaur-routes">
+    <img
+      src="/.netlify/images?url=/img/devilsaur_routes.webp&w=1400&q=80"
+      srcset="/.netlify/images?url=/img/devilsaur_routes.webp&w=700&q=80 700w,
+              /.netlify/images?url=/img/devilsaur_routes.webp&w=1400&q=80 1400w"
+      sizes="(max-width: 768px) 100vw, 1400px"
+      alt="Devilsaur routes in WoW Classic (Un'Goro tracking paths)"
+      width="1400" height="933"
+      loading="lazy" decoding="async">
+  </section>
+
+  <!-- Back to Top button (optional on this page too) -->
+  <button id="backToTop" aria-label="Back to top">↑ Top</button>
+  <script>
+    const topBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) { topBtn.classList.add('show'); }
+      else { topBtn.classList.remove('show'); }
+    });
+    topBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
