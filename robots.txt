@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wowbuilds.nightsidecode.com/sitemap.xml
