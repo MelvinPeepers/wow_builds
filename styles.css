@@ -142,6 +142,72 @@ img {
   color: #a9aaff;
 }
 
+/* Mage class color for h2 headers */
+#mage h2 {
+  color: #3FC7EB;
+}
+#mage h2 a {
+  color: #3FC7EB;
+}
+#mage h2 a:hover {
+  color: #6fd9f5;
+}
+
+/* Shaman class color for h2 headers */
+#shaman h2 {
+  color: #0070DD;
+}
+#shaman h2 a {
+  color: #0070DD;
+}
+#shaman h2 a:hover {
+  color: #3090ee;
+}
+
+/* Hunter class color for h2 headers */
+#hunter h2 {
+  color: #AAD372;
+}
+#hunter h2 a {
+  color: #AAD372;
+}
+#hunter h2 a:hover {
+  color: #c2e09a;
+}
+
+/* Rogue class color for h2 headers */
+#rogue h2 {
+  color: #FFF468;
+}
+#rogue h2 a {
+  color: #FFF468;
+}
+#rogue h2 a:hover {
+  color: #fff890;
+}
+
+/* Priest class color for h2 headers */
+#priest h2 {
+  color: #FFFFFF;
+}
+#priest h2 a {
+  color: #FFFFFF;
+}
+#priest h2 a:hover {
+  color: #cccccc;
+}
+
+/* Paladin class color for h2 headers */
+#paladin h2 {
+  color: #F48CBA;
+}
+#paladin h2 a {
+  color: #F48CBA;
+}
+#paladin h2 a:hover {
+  color: #f7aece;
+}
+
 /* Optional: highlight the targeted section */
 :target { outline: 2px solid #2E6FBF; outline-offset: 6px; border-radius: 6px; }
 
