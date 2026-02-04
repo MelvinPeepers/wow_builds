@@ -114,6 +114,20 @@ img {
   scroll-margin-top: clamp(56px, 8vh, 96px);
 }
 
+/* Druid class color for h2 headers */
+#druid h2,
+#balance_druid h2 {
+  color: #FF7C0A;
+}
+#druid h2 a,
+#balance_druid h2 a {
+  color: #FF7C0A;
+}
+#druid h2 a:hover,
+#balance_druid h2 a:hover {
+  color: #FFa04a;
+}
+
 /* Optional: highlight the targeted section */
 :target { outline: 2px solid #2E6FBF; outline-offset: 6px; border-radius: 6px; }
 
