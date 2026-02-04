@@ -128,6 +128,20 @@ img {
   color: #FFa04a;
 }
 
+/* Warlock class color for h2 headers */
+#warlock h2,
+#demonology_warlock h2 {
+  color: #8788EE;
+}
+#warlock h2 a,
+#demonology_warlock h2 a {
+  color: #8788EE;
+}
+#warlock h2 a:hover,
+#demonology_warlock h2 a:hover {
+  color: #a9aaff;
+}
+
 /* Optional: highlight the targeted section */
 :target { outline: 2px solid #2E6FBF; outline-offset: 6px; border-radius: 6px; }
 
